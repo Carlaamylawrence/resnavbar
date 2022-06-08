@@ -1,0 +1,53 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVIGATION STYLES */
+
+#navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+#navbar ul a {
+  text-decoration: none;
+  color: black;
+}
+#navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  background-color: rgb(101, 101, 124);
+}
+#hamburger-menu {
+  position: fixed;
+  right: 30px;
+  display: none;
+}
+/* LANDING STYLES */
+
+@media screen and (max-width: 600px) {
+  #navbar {
+    height: 100%;
+    top: -100vh;
+    transition: all 0.3s linear;
+  }
+
+  #navbar.active {
+    top: 0%;
+  }
+  #navbar ul {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  #hamburger-menu {
+    display: block;
+  }
+}
